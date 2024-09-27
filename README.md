@@ -3,7 +3,9 @@ Automatic sorting app
 
 
 
-Schedule the sorting to happen weekly with powershell ::> $action = New-ScheduledTaskAction -Execute "python.exe" -Argument "C:\Users\nmkoninn\source\repos\PythonApplication4\Sorting "
+Schedule your script powershell :
+
+:> $action = New-ScheduledTaskAction -Execute "python.exe" -Argument "C:\Users\nmkoninn\source\repos\PythonApplication4\Sorting "
 $trigger = New-ScheduledTaskTrigger -Weekly -DaysOfWeek Sunday -At 9:00AM
 $principal = New-ScheduledTaskPrincipal -UserId "NT AUTHORITY\SYSTEM" -RunLevel Highest
 Register-ScheduledTask -Action $action -Trigger $trigger -TaskName "Sort" -Principal $principal 
