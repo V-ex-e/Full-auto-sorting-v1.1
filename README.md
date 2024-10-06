@@ -11,3 +11,7 @@ $principal = New-ScheduledTaskPrincipal -UserId "NT AUTHORITY\SYSTEM" -RunLevel 
 Register-ScheduledTask -Action $action -Trigger $trigger -TaskName "Sort" -Principal $principal 
 
 You will need to define the path of the .py on your machine
+
+
+OR 
+![description](https://github.com/user-attachments/assets/2d972831-75d6-4a81-a868-47b07e83c7bc)
